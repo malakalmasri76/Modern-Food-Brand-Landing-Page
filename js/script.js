@@ -46,7 +46,7 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
     const targets = document.querySelectorAll(`
         main section > h2, main section > h3, main section > p,
         .Our-Services .item, .Our-Services .read-more,
-        .Fresh-Fruits .row,
+        .Fresh-Fruits .fruit,
         .How-It-Works .step, .FAQ details,
         .Testimonial .slides, .Testimonial .testimonial-arrows,
         .Contact-Us form > *,
@@ -63,8 +63,8 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
 
     targets.forEach((el) => {
         // stagger siblings inside the same grid/row (0s, .12s, .24s ...)
-        const index = [...el.parentElement.children].filter((c) => c.matches('.item, .col, .row')).indexOf(el);
-        if (index > 0) el.style.setProperty('--d', `${Math.min(index, 4) * 0.12}s`);
+        const index = [...el.parentElement.children].filter((c) => c.matches('.item, .col, .fruit, .step')).indexOf(el);
+        if (index > 0) el.style.setProperty('--d', `${(index % 4) * 0.12}s`);
         el.classList.add('reveal');
         io.observe(el);
     });

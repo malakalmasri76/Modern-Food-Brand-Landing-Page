@@ -155,43 +155,6 @@ nav .button a { width: 120px; }
 
 /* ---------- fresh fruits ---------- */
 .Fresh-Fruits { text-align: center; padding: 30px 0 75px; }
-.Fresh-Fruits .box {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 0 var(--pad);
-}
-.Fresh-Fruits .box .row {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 250px;
-    align-items: center;
-    gap: 60px;
-    text-align: left;
-}
-.Fresh-Fruits .box .row h3 { font-weight: 600; font-size: 20px; margin-top: 30px; }
-.Fresh-Fruits .box .row p { font-size: 17px; font-weight: 400; padding-bottom: 20px; max-width: 720px; margin: 0; padding-inline: 0; }
-.Fresh-Fruits .box .row .img { display: flex; justify-content: center; }
-.Fresh-Fruits .box .row .img img { width: 250px; }
-.Fresh-Fruits .box .row .img-small img { width: 150px; }
-
-/* ---------- tasty ---------- */
-.Tasty {
-    width: 100%;
-    min-height: 500px;
-    background: url(../img/tasty-image.png) center / cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 80px;
-    padding: 20px;
-}
-.Tasty .text {
-    color: #fff;
-    font-size: clamp(36px, 8vw, 80px);
-    font-weight: 900;
-    text-align: center;
-    line-height: 1.1;
-}
 
 /* ---------- testimonial ---------- */
 .Testimonial { text-align: center; padding-bottom: 75px; }
@@ -319,8 +282,6 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
     .banner p { margin: 25px auto; }
     .banner .buttons { justify-content: center; }
     .banner .arrow { position: static; flex-direction: row; justify-content: center; gap: 10px; transform: none; }
-    .Fresh-Fruits .box .row { grid-template-columns: 1fr; text-align: center; gap: 20px; }
-    .Fresh-Fruits .box .row p { margin-inline: auto; }
     .Contact-Us { background-image: none; }
     .Contact-Us form input, .Contact-Us form textarea { width: 100%; }
 }
@@ -393,7 +354,6 @@ nav ul li a.active::after { transform: scaleX(1); }
     .Our-Services .card .item:hover { transform: translateY(-8px); box-shadow: inset 0 7px 0 var(--orange), 0 14px 28px rgba(0, 0, 0, .12); }
     .Our-Services .card .item:hover img { transform: scale(1.15) rotate(-6deg); }
 
-    .Fresh-Fruits .box .row:hover .img img { transform: rotate(-6deg) scale(1.08); }
 
     .info .icons a:hover { transform: translateY(-4px) scale(1.12); }
     .Contact-Us button:hover,
@@ -402,16 +362,11 @@ nav ul li a.active::after { transform: scaleX(1); }
 }
 .Our-Services .card .item { transition: transform .3s ease, box-shadow .3s ease; }
 .Our-Services .card .item img { transition: transform .35s ease; }
-.Fresh-Fruits .box .row .img img { transition: transform .4s ease; }
 .info .icons a { display: block; transition: transform .25s; }
 .Contact-Us button, .info .Follow-Us form button { transition: background-color .2s, transform .2s; }
 .Testimonial .arrow a { transition: background-color .2s, transform .2s; }
 .Contact-Us form input, .Contact-Us form textarea { transition: border-color .2s; }
 
-/* parallax on the "Very tasty" banner (desktop only) */
-@media (min-width: 901px) and (hover: hover) {
-    .Tasty { background-attachment: fixed; }
-}
 
 /* motion: only for people who haven't asked to reduce it */
 @media (prefers-reduced-motion: no-preference) {
@@ -479,24 +434,8 @@ nav .button a, .banner .shop a, .banner .content a, .banner .prev a, .banner .ne
 @keyframes bump { 50% { transform: scale(1.4); } }
 
 /* price + add to cart */
-.Fresh-Fruits .buy-now { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .price { font-weight: 600; font-size: 22px; color: var(--orange); }
 .price small { font-size: 14px; font-weight: 300; color: #555; }
-.Fresh-Fruits .buy-now button {
-    width: 145px;
-    padding: 10px 0;
-    background: #000;
-    color: #f7f7f7;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    font: inherit;
-    cursor: pointer;
-    transition: background-color .2s, color .2s, border-color .2s, transform .2s, box-shadow .2s;
-}
-.Fresh-Fruits .buy-now button:hover { background: #fff; border-color: #000; color: #000; }
-.Fresh-Fruits .buy-now button:active { transform: scale(.96); }
-@media (hover: hover) { .Fresh-Fruits .buy-now button:hover { transform: translateY(-3px); box-shadow: 0 8px 16px rgba(0,0,0,.15); } }
-@media (max-width: 900px) { .Fresh-Fruits .buy-now { justify-content: center; } }
 
 /* drawer */
 .cart-overlay {
@@ -631,3 +570,93 @@ nav .button a, .banner .shop a, .banner .content a, .banner .prev a, .banner .ne
 .faq-list summary:hover { color: var(--orange); }
 .faq-list details p { padding: 0 40px 20px 0; font-size: 17px; font-weight: 300; }
 @media (prefers-reduced-motion: reduce) { .faq-list summary::after { transition: none; } }
+
+/* service icons + testimonial avatars */
+.Our-Services .card .item svg { display: block; margin: 30px auto 0; color: var(--orange); transition: transform .35s ease; }
+@media (hover: hover) { .Our-Services .card .item:hover svg { transform: scale(1.15) rotate(-6deg); } }
+.Testimonial .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px; height: 96px;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+}
+.Testimonial .client:nth-child(2) .avatar { background: #1a7f4b; }
+.Testimonial .client:nth-child(3) .avatar { background: #292727; }
+
+/* =========================================================
+   Fruit grid
+   ========================================================= */
+.fruit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+    padding: 50px var(--pad) 0;
+}
+.fruit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px 16px 18px;
+    background: #fff;
+    border: 1px solid #F0DED4;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.fruit-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px; height: 96px;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    background: #FFF4EE;
+    font-size: 52px;
+    line-height: 1;
+}
+.fruit-img img { width: 64px; height: 64px; object-fit: contain; transition: transform .35s ease; }
+.fruit h3 { font-size: 18px; font-weight: 600; }
+.fruit .fruit-desc { margin: 2px 0 10px; font-size: 14px; font-weight: 300; color: #555; }
+.fruit .price { font-size: 18px; margin-bottom: 14px; }
+.fruit-add {
+    width: 100%;
+    margin-top: auto;
+    padding: 9px 0;
+    background: #000;
+    color: #f7f7f7;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color .2s, color .2s, border-color .2s, transform .2s;
+}
+.fruit-add:hover { background: #fff; border-color: #000; color: #000; }
+.fruit-add:active { transform: scale(.97); }
+@media (hover: hover) {
+    .fruit:hover { transform: translateY(-6px); box-shadow: 0 14px 28px rgba(0, 0, 0, .1); }
+    .fruit:hover .fruit-img img { transform: scale(1.12) rotate(-6deg); }
+}
+@media (max-width: 520px) { .fruit-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+
+/* =========================================================
+   Section separation: consistent spacing + alternating backgrounds
+   ========================================================= */
+.Our-Services, .Fresh-Fruits, .How-It-Works, .Testimonial, .FAQ, .Contact-Us, .info { padding-block: 80px; }
+.Our-Services { background-color: #fff; }
+.Fresh-Fruits { background-color: #FFF4EE; }
+.How-It-Works { background-color: #fff; }
+.Testimonial { background-color: #F7F7F7; }
+.FAQ { background-color: #fff; }
+.Contact-Us { background-color: #FFF4EE; }
+.info { background-color: #fff; }
+footer { background-color: #1a1a1a; color: #ddd; }
+@media (max-width: 600px) {
+    .Our-Services, .Fresh-Fruits, .How-It-Works, .Testimonial, .FAQ, .Contact-Us, .info { padding-block: 56px; }
+}

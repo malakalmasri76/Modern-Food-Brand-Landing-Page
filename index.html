@@ -23,8 +23,10 @@
             </button>
             <ul id="nav-menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#fruits">Fruits</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#fruits">Fruits</a></li>
+                <li><a href="#how-it-works">How it works</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact us</a></li>
                 <li class="search-icon"><a href="#" aria-label="Search"><img src="./img/search-icon.png" alt=""></a></li>
                 <li class="cart-li">
@@ -64,25 +66,24 @@
         <!-- start Our Services section -->
         <section class="Our-Services" id="services">
             <h2>Our Services</h2>
-            <p>From the farm to your doorstep, here is how we keep your fruit fresh and your day easier.</p>
+            <p>Whether it is one kilo or a hundred, here is how we get fresh fruit to you.</p>
             <div class="card">
                 <div class="item">
-                    <img src="./img/card-item-1.png" alt="" loading="lazy">
-                    <h3>Orange</h3>
-                    <p>Juicy, sweet oranges picked ripe and packed within hours. Perfect for fresh juice, healthy snacking, or adding a bright note to salads.</p>
+                    <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v10H3z"/><path d="M14 9h4l3 3v4h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>
+                    <h3>Home Delivery</h3>
+                    <p>Fresh fruit delivered to your door within 24 hours of picking. Pick a time that suits you and we will confirm it on WhatsApp.</p>
                 </div>
                 <div class="item">
-                    <img src="./img/card-item-2.png" alt="" loading="lazy">
-                    <h3>Grapes</h3>
-                    <p>Seedless red and green grapes, washed and packed in small boxes. A sweet snack for the lunchbox, the office, or a cheese board.</p>
+                    <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg>
+                    <h3>Weekly Fruit Boxes</h3>
+                    <p>A mixed box of seasonal fruit every week, so you never run out. Change the contents or pause it whenever you like.</p>
                 </div>
                 <div class="item">
-                    <img src="./img/card-item-3.png" alt="" loading="lazy">
-                    <h3>Guava</h3>
-                    <p>Fragrant, vitamin C-rich guava picked at peak ripeness. Enjoy it fresh, blend it into smoothies, or turn it into homemade jam.</p>
+                    <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/><path d="M9 11h.01M15 11h.01"/></svg>
+                    <h3>Bulk Orders</h3>
+                    <p>For offices, cafés and events: order larger quantities at a better price. Tell us what you need and we will send you a quote.</p>
                 </div>
-                </div>
-            <div class="read-more"><a href="#">Read More</a></div>
+            </div>
         </section>
         <!-- end Our Services section -->
 
@@ -90,43 +91,64 @@
         <section class="Fresh-Fruits" id="fruits">
             <h2>Fresh Fruits</h2>
             <p>Seasonal fruit, picked at its best and delivered within 24 hours.</p>
-            <div class="box">
-                <div class="row">
-                    <div class="col">
-                        <h3>Best Fresh Orange</h3>
-                        <p>Our oranges come from family-run groves where the fruit ripens on the tree, not in a warehouse. They are sweet, thin-skinned and full of juice, ideal for a glass of fresh juice in the morning.</p>
-                        <div class="buy-now">
-                            <span class="price">$3.50 <small>/ kg</small></span>
-                            <button type="button" data-add data-id="orange" data-name="Fresh Orange" data-price="3.50">Add to cart</button>
-                        </div>
-                    </div>
-                    <div class="img"><img src="./img/orange.png" alt="Fresh oranges" loading="lazy"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <h3>Best Fresh Grapes</h3>
-                        <p>Crisp, sweet seedless grapes grown in sunny vineyards and picked by hand in small batches. Every bunch is checked before packing, so what arrives is what you would choose yourself.</p>
-                        <div class="buy-now">
-                            <span class="price">$6.00 <small>/ kg</small></span>
-                            <button type="button" data-add data-id="grapes" data-name="Fresh Grapes" data-price="6.00">Add to cart</button>
-                        </div>
-                    </div>
-                    <div class="img img-small"><img src="./img/grapes.png" alt="Fresh grapes" loading="lazy"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <h3>Best Fresh Guava</h3>
-                        <p>Ripe guava with soft pink flesh and a rich tropical aroma. A great source of vitamin C and fiber, and delicious fresh, in smoothies, or cooked into jam.</p>
-                        <div class="buy-now">
-                            <span class="price">$5.00 <small>/ kg</small></span>
-                            <button type="button" data-add data-id="guava" data-name="Fresh Guava" data-price="5.00">Add to cart</button>
-                        </div>
-                    </div>
-                    <div class="img"><img src="./img/gauva.png" alt="Fresh guava" loading="lazy"></div>
-                </div>
-            </div>
+            <ul class="fruit-grid">
+                <li class="fruit">
+                    <span class="fruit-img"><img src="./img/orange.png" alt="" width="64" height="64" loading="lazy"></span>
+                    <h3>Orange</h3>
+                    <p class="fruit-desc">Sweet and juicy</p>
+                    <span class="price">$3.50 <small>/ kg</small></span>
+                    <button type="button" class="fruit-add" data-add data-id="orange" data-name="Orange" data-price="3.50">Add to cart</button>
+                </li>
+                <li class="fruit">
+                    <span class="fruit-img"><img src="./img/grapes.png" alt="" width="64" height="64" loading="lazy"></span>
+                    <h3>Grapes</h3>
+                    <p class="fruit-desc">Seedless, red and green</p>
+                    <span class="price">$6.00 <small>/ kg</small></span>
+                    <button type="button" class="fruit-add" data-add data-id="grapes" data-name="Grapes" data-price="6.00">Add to cart</button>
+                </li>
+                <li class="fruit">
+                    <span class="fruit-img"><img src="./img/gauva.png" alt="" width="64" height="64" loading="lazy"></span>
+                    <h3>Guava</h3>
+                    <p class="fruit-desc">Soft pink, rich in vitamin C</p>
+                    <span class="price">$5.00 <small>/ kg</small></span>
+                    <button type="button" class="fruit-add" data-add data-id="guava" data-name="Guava" data-price="5.00">Add to cart</button>
+                </li>
+                <li class="fruit">
+                    <span class="fruit-img" aria-hidden="true">🍓</span>
+                    <h3>Strawberry</h3>
+                    <p class="fruit-desc">Hand-picked, in season</p>
+                    <span class="price">$7.50 <small>/ kg</small></span>
+                    <button type="button" class="fruit-add" data-add data-id="strawberry" data-name="Strawberry" data-price="7.50">Add to cart</button>
+                </li>
+                <li class="fruit">
+                    <span class="fruit-img" aria-hidden="true">🥭</span>
+                    <h3>Mango</h3>
+                    <p class="fruit-desc">Ripe and fragrant</p>
+                    <span class="price">$6.50 <small>/ kg</small></span>
+                    <button type="button" class="fruit-add" data-add data-id="mango" data-name="Mango" data-price="6.50">Add to cart</button>
+                </li>
+                <li class="fruit">
+                    <span class="fruit-img" aria-hidden="true">🍌</span>
+                    <h3>Banana</h3>
+                    <p class="fruit-desc">Naturally sweet</p>
+                    <span class="price">$2.50 <small>/ kg</small></span>
+                    <button type="button" class="fruit-add" data-add data-id="banana" data-name="Banana" data-price="2.50">Add to cart</button>
+                </li>
+                <li class="fruit">
+                    <span class="fruit-img" aria-hidden="true">🍍</span>
+                    <h3>Pineapple</h3>
+                    <p class="fruit-desc">Tangy and refreshing</p>
+                    <span class="price">$4.00 <small>/ kg</small></span>
+                    <button type="button" class="fruit-add" data-add data-id="pineapple" data-name="Pineapple" data-price="4.00">Add to cart</button>
+                </li>
+                <li class="fruit">
+                    <span class="fruit-img" aria-hidden="true">🍉</span>
+                    <h3>Watermelon</h3>
+                    <p class="fruit-desc">Cold, crisp and juicy</p>
+                    <span class="price">$2.00 <small>/ kg</small></span>
+                    <button type="button" class="fruit-add" data-add data-id="watermelon" data-name="Watermelon" data-price="2.00">Add to cart</button>
+                </li>
+            </ul>
         </section>
         <!-- end Fresh Fruits section -->
 
@@ -154,29 +176,23 @@
         </section>
         <!-- end How it works section -->
 
-        <!-- start Tasty section -->
-        <section class="Tasty">
-            <h2 class="text">VERY TASTY FRUITS</h2>
-        </section>
-        <!-- end Tasty section -->
-
         <!-- start Testimonial section -->
         <section class="Testimonial">
             <h2>Testimonial</h2>
-            <p>Here is what our customers say about their orders.</p>
+            <p>Sample reviews, written for this demo project.</p>
             <div class="slides" aria-live="polite">
                 <div class="client active">
-                    <img src="./img/client.png" alt="Johnhex" loading="lazy">
+                    <div class="avatar" aria-hidden="true">J</div>
                     <h3>Johnhex</h3>
                     <p>I order a box every week and the oranges are always sweet and juicy. Delivery is quick, and everything arrives fresh and well packed. I would not go back to the supermarket.</p>
                 </div>
                 <div class="client">
-                    <img src="./img/client.png" alt="Sarah Miles" loading="lazy">
+                    <div class="avatar" aria-hidden="true">SM</div>
                     <h3>Sarah Miles</h3>
                     <p>The grapes were the best I have had in years. My kids finished the whole box in one afternoon, and the customer service team answered my questions right away.</p>
                 </div>
                 <div class="client">
-                    <img src="./img/client.png" alt="Omar Khalil" loading="lazy">
+                    <div class="avatar" aria-hidden="true">OK</div>
                     <h3>Omar Khalil</h3>
                     <p>We order in bulk for our café, and the quality has been consistent every single time. The guava makes an amazing smoothie, and our customers keep asking where it comes from.</p>
                 </div>
@@ -230,13 +246,6 @@
         </section>
         <!-- end Contact Us section -->
 
-        <!-- start map section -->
-        <section class="map">
-            <iframe title="Our location on Google Maps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d189742.39616040347!2d-73.89477808251469!3d40.754085430379405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1692309731902!5m2!1sen!2s"
-                width="100%" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-        <!-- end map section -->
-
         <!-- start info section -->
         <section class="info">
             <div class="container">
@@ -253,13 +262,7 @@
                     <p>A small team of growers and packers who care about good fruit.</p>
                 </div>
                 <div class="Follow-Us">
-                    <h5>Follow Us</h5>
-                    <div class="icons">
-                        <a href="#" aria-label="Facebook"><img src="./img/fb.png" alt=""></a>
-                        <a href="#" aria-label="Twitter"><img src="./img/twitter.png" alt=""></a>
-                        <a href="#" aria-label="LinkedIn"><img src="./img/linkedin.png" alt=""></a>
-                        <a href="#" aria-label="Instagram"><img src="./img/instagram.png" alt=""></a>
-                    </div>
+                    <h5>Stay Updated</h5>
                     <form action="#" method="post">
                         <label for="sub">Subscribe Now</label>
                         <input type="email" id="sub" name="subscribe-email" autocomplete="email" required>
@@ -274,7 +277,7 @@
 
     <!-- start footer -->
     <footer>
-        <p>© 2023 All Rights Reserved. Design by Malak Almasri</p>
+        <p>© 2026 All Rights Reserved. Design by Malak Almasri</p>
     </footer>
     <!-- end footer -->
     <div class="cart-overlay" hidden></div>
